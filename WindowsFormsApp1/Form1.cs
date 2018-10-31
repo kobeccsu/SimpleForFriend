@@ -109,12 +109,12 @@ namespace WindowsFormsApp1
             }
 
             // Copy each subdirectory using recursion.
-            //foreach (DirectoryInfo diSourceSubDir in source.GetDirectories())
-            //{
-            //    DirectoryInfo nextTargetSubDir =
-            //        target.CreateSubdirectory(diSourceSubDir.Name);
-            //    CopyAll(diSourceSubDir, nextTargetSubDir);
-            //}
+            foreach (DirectoryInfo diSourceSubDir in source.GetDirectories())
+            {
+                DirectoryInfo nextTargetSubDir =
+                    target.CreateSubdirectory(diSourceSubDir.Name);
+                CopyAll(diSourceSubDir, nextTargetSubDir);
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
